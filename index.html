@@ -1,21 +1,31 @@
-
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fake News Detector</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fake News Detection</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; background: #f4f4f4; }
+    input, button { padding: 0.5rem; margin: 0.5rem 0; }
+    #result { margin-top: 1rem; font-weight: bold; }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Fake News Detector</h1>
-    <form action="/predict" method="post">
-      <textarea name="news" rows="8" cols="60" placeholder="Paste news article here..." required></textarea><br>
-      <button type="submit">Check</button>
-    </form>
-  </div>
+  <h1>Fake News Detector 🔍</h1>
+  <input type="text" id="newsInput" placeholder="Enter a news headline" />
+  <button onclick="predict()">Check</button>
+  <p id="result">Prediction will appear here</p>
+
+  <script>
+    function predict() {
+      const input = document.getElementById('newsInput').value;
+      if (!input.trim()) {
+        document.getElementById('result').innerText = '❌ Please enter a headline';
+        return;
+      }
+      // Dummy result
+      document.getElementById('result').innerText = '✅ This news is likely REAL!';
+    }
+  </script>
 </body>
 </html>
-
-
