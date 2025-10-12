@@ -1,0 +1,40 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Fake News Detector</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">Fake News Detector</a>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/about">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">About Fake News Detector</h1>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">How It Works</h5>
+        <p class="card-text">This tool uses a machine learning model trained on a dataset of news articles to classify text as either real or fake news. The model employs natural language processing techniques, including TF-IDF vectorization and a Passive Aggressive Classifier, to analyze the content.</p>
+        <h5 class="card-title">Accuracy and Limitations</h5>
+        <p class="card-text">While the model provides a prediction with a confidence score, it is not infallible. Fake news detection can be challenging due to evolving language patterns, satire, and context. Always verify information from multiple reliable sources.</p>
+        <h5 class="card-title">Usage</h5>
+        <p class="card-text">Paste a news article into the text box and click "Check" to get a prediction. The tool is for educational purposes and should not be used as the sole basis for decision-making.</p>
+        <h5 class="card-title">Privacy</h5>
+        <p class="card-text">No data is stored or shared. All processing happens in real-time on the server.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
